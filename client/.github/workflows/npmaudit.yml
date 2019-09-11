@@ -1,0 +1,28 @@
+name: NPM dependencies audit
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  audit:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, audit
+      run: |
+        npm install
+        npm audit
+      env:
+        CI: true
