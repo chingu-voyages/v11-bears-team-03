@@ -3,7 +3,6 @@ FROM node AS build-env
 RUN apt-get update && \
     npm i npm@latest -g
 
-COPY tsconfig.json /tsconfig.json
 COPY .babelrc /.babelrc
 COPY webpack /webpack
 COPY package-lock.json /package-lock.json
