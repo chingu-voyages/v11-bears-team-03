@@ -2,17 +2,30 @@
   "name": "react-app-template",
   "version": "1.0.0",
   "description": "A template for react apps",
+  "license": "ISC",
+  "author": "PALABALA",
   "main": "webpack.config.dev.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .js,.jsx src/",
-    "start": "webpack-dev-server --config ./webpack/webpack.config.js --env dev --mode development",
+    "analyze": "webpack -p --config ./webpack/webpack.config.js --env analyze --progress --display-error-details --mode production",
     "build-dev": "webpack -p --config ./webpack/webpack.config.js --env dev --progress --display-error-details --mode development",
     "build-prod": "webpack -p --config ./webpack/webpack.config.js --env prod --mode production",
-    "analyze": "webpack -p --config ./webpack/webpack.config.js --env analyze --progress --display-error-details --mode production"
+    "lint": "eslint --ext .js,.jsx src/",
+    "start": "webpack-dev-server --config ./webpack/webpack.config.js --env dev --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "PALABALA",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyages/v11-bears-team-03/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyages/v11-bears-team-03"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -38,6 +51,7 @@
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "workbox-webpack-plugin": "^4.3.1"
   }
 }
