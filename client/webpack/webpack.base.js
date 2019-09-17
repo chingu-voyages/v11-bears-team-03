@@ -12,7 +12,7 @@ const DIR_PATH = {
 };
 
 module.exports = {
-	entry: [path.join(DIR_PATH.SRC, 'index.js')],
+	entry: [path.join(DIR_PATH.SRC, 'index.jsx')],
 	output: {
 		path: DIR_PATH.BUILD,
 		publicPath: '',

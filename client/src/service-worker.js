@@ -14,4 +14,16 @@ workbox.routing.registerRoute(
 	}),
 );
 
+workbox.routing.registerRoute(
+	/.*maps\.(?:googleapis|gstatic)\.com.*$/u,
+	new workbox.strategies.StaleWhileRevalidate({
+		cacheName: 'google-maps',
+		plugins: [
+			new workbox.expiration.Plugin({
+				maxAgeSeconds: 60 * 60 * 24 * 30,
+			}),
+		],
+	}),
+);
+
 workbox.precaching.precacheAndRoute(self.__precacheManifest);

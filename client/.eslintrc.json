@@ -4,6 +4,7 @@
 	"env": {
 		"browser": true
 	},
+	"parser": "babel-eslint",
 	"settings": {
 		"import/resolver": {
 			"node": {
@@ -15,6 +16,7 @@
 	"rules": {
 		"indent": [2, "tab"],
 		"no-tabs": 0,
+		"comma-dangle": ["error", "always"],
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
 		"react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }]
