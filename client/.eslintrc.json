@@ -4,6 +4,9 @@
 	"env": {
 		"browser": true
 	},
+	"globals": {
+		"google": true
+	},
 	"parser": "babel-eslint",
 	"settings": {
 		"import/resolver": {
@@ -34,7 +37,7 @@
 			}
 		},
 		{
-			"files": ["webpack/**/*.js"],
+			"files": ["webpack/**/*.js", "setupTests.js"],
 			"env": {
 				"node": true
 			},
