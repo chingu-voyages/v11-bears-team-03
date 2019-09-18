@@ -18,6 +18,8 @@
 		"no-tabs": 0,
 		"comma-dangle": ["error", "always"],
 		"react/jsx-indent": [2, "tab"],
+		"react/state-in-constructor": ["error", "never"],
+		"react/static-property-placement": ["error", "static public field"],
 		"react/jsx-indent-props": [2, "tab"],
 		"react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }]
 	},
